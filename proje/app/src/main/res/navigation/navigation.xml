@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/listefragment">
+
+    <fragment
+        android:id="@+id/listefragment"
+        android:name="com.mehmetbeken.proje.fragment.listefragment"
+        android:label="fragment_listefragment"
+        tools:layout="@layout/fragment_listefragment" >
+        <action
+            android:id="@+id/action_listefragment_to_kayitfragment"
+            app:destination="@id/kayitfragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kayitfragment"
+        android:name="com.mehmetbeken.proje.fragment.kayitfragment"
+        android:label="fragment_kayitfragment"
+        tools:layout="@layout/fragment_kayitfragment" >
+        <action
+            android:id="@+id/action_kayitfragment_to_listefragment"
+            app:destination="@id/listefragment" />
+        <argument
+            android:name="artId"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="info"
+            app:argType="string" />
+
+
+    </fragment>
+</navigation>
